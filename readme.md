@@ -32,17 +32,32 @@ Berikut adalah beberapa tujuan berdasarkan pernyataan masalah:
 
 
 ## Data Understanding
-Paragraf awal bagian ini menjelaskan informasi mengenai jumlah data, kondisi data, dan informasi mengenai data yang digunakan. Sertakan juga sumber atau tautan untuk mengunduh dataset. Contoh: [UCI Machine Learning Repository](https://www.kaggle.com/datasets/CooperUnion/anime-recommendations-database).
 
-Selanjutnya, uraikanlah seluruh variabel atau fitur pada data. Sebagai contoh:  
+Dataset yang digunakan dalam proyek ini adalah "Anime Recommendations Database" yang dapat diunduh dari [Kaggle](https://www.kaggle.com/CooperUnion/anime-recommendations-database). Dataset ini berisi informasi tentang anime, termasuk judul, genre, jenis, jumlah episode, rating, dan jumlah anggota komunitas yang menyukai anime tersebut.
 
-Variabel-variabel pada Restaurant UCI dataset adalah sebagai berikut:
-- accepts : merupakan jenis pembayaran yang diterima pada restoran tertentu.
-- cuisine : merupakan jenis masakan yang disajikan pada restoran.
-- dst
+**Deskripsi Data**
 
-**Rubrik/Kriteria Tambahan (Opsional)**:
-- Melakukan beberapa tahapan yang diperlukan untuk memahami data, contohnya teknik visualisasi data beserta insight atau exploratory data analysis.
+- Jumlah Baris: 12,294
+- Jumlah Kolom: 7
+
+**Variabel-variabel pada Dataset Anime Recommendations Database adalah sebagai berikut:**
+
+1. `anime_id`: ID unik yang mengidentifikasi setiap anime di myanimelist.net.
+2. `name`: (int64) Nama lengkap dari anime.
+3. `genre`: (object) Daftar genre dari anime, dipisahkan oleh koma.
+4. `type`: (object) Jenis anime, misalnya, TV, Movie, OVA, dll.
+5. `episodes`: (object) Jumlah episode dalam anime (1 jika film).
+6. `rating`: (float64) Rata-rata rating anime dari semua pengguna di myanimelist.net.
+7. `members`: (int64) Jumlah anggota komunitas yang menyukai anime ini.
+
+**Eksplorasi Awal Data**
+
+- Data telah diunggah dan diperiksa untuk memahami informasi dasar, termasuk ukuran data dan tipe data masing-masing kolom.
+- Ditemukan adanya missing values di kolom 'genre,' 'type,' 'rating,' dan 'episodes,' yang kemudian diisi atau diperbaiki sesuai dengan kebutuhan.
+- Visualisasi data dilakukan untuk mengeksplorasi distribusi rating, jenis anime, hubungan antara jumlah anggota dan rating, serta penanganan outliers di kolom 'episodes' dan 'rating.'
+
+**Eksplorasi Awal Data**
+
 
 ## Data Preparation
 Pada bagian ini Anda menerapkan dan menyebutkan teknik data preparation yang dilakukan. Teknik yang digunakan pada notebook dan laporan harus berurutan.
